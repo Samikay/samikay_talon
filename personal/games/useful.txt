@@ -1,0 +1,16 @@
+sound settings:
+    key(super)
+    "sound settings"
+    key(enter)
+
+
+key(space:down):
+    speech.disable()
+key(space:up):
+    speech.enable()
+
+
+hold down <user.modifiers>+:
+        key("{modifiers}:down")
+release <user.modifiers>+:
+        key("{modifiers}:up")
