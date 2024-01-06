@@ -1,6 +1,0 @@
-core/numbers.py: added n20 matching rule (and numbers.twenty list)
-plugin/mouse.py & mouse.talon: mouse hiss off
-
-
-ssh-keygen -t ed25519 -C "skilani@gmail.com"
-ssh-add c:\Users\User\.ssh\id_ed25519

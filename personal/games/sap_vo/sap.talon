@@ -26,10 +26,6 @@ three: user.game_sap_moveto_click(495, 350)
 [slot] four:  user.game_sap_moveto_click(605, 350)
 five:  user.game_sap_moveto_click(715, 350)
 
-drag right [<user.n20>]: user.mouse_sap_drag(1 * n20, 0)
-drag left [<user.n20>]: user.mouse_sap_drag(-1 * n20, 0)
-drag up [<user.n20>]: user.mouse_sap_drag(0, -1 * n20)
-drag down [<user.n20>]: user.mouse_sap_drag(0, 1 * n20)
 
 (next|refresh): user.game_sap_moveto_click(150, 800)
 

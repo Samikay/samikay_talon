@@ -115,3 +115,5 @@ curse no:
 
 mouse hiss up: user.hiss_scroll_up()
 mouse hiss down: user.hiss_scroll_down()
+mouse hiss off: user.hiss_turn_off()
+mouse hiss on: user.hiss_turn_on()

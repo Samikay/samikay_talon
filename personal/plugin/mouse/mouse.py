@@ -16,11 +16,11 @@ setting_mouse_move_amount = mod.setting(
     desc="The amount to move the mouse",
 )
 
-setting_mouse_move_window_amount = mod.setting(
-    "mouse_move_relative_amount",
+setting_mouse_game_move_amount = mod.setting(
+    "mouse_game_move_amount",
     type=int,
     default=40,
-    desc="The amount to move the mouse in the current window",
+    desc="Specific setting for the game you're playing",
 )
 
 @mod.action_class
@@ -75,6 +75,12 @@ class ExtendActions:
         actions.user.mouse_drag_end()
         #self.mouse_release()
 
-    def mouse_move_times(x: int, y: int):
-        """Mouse movement"""
-        self.mouse_move_relative(x * setting_mouse_move_amount.get(), y * setting_mouse_move_amount.get())
+    def mouse_move_dir(dir: str, v: int, distance: int = 0):
+        """Directional mouse movement"""
+        if (distance == 0): distance = setting_mouse_move_amount.get()
+        x,y = actions.user.util_dir_to_xy(dir, v)
+    
+
+        self.mouse_move_relative(x * distance, y * distance)
+
+    

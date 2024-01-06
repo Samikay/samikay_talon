@@ -12,6 +12,7 @@ gaze_job = None
 cancel_scroll_on_pop = True
 control_mouse_forced = False
 hiss_scroll_up = False
+hiss_off = False
 
 default_cursor = {
     "AppStarting": r"%SystemRoot%\Cursors\aero_working.ani",
@@ -230,6 +231,17 @@ class Actions:
         global hiss_scroll_up
         hiss_scroll_up = False
 
+    def hiss_turn_on():
+        "turn hiss recognition on"
+        global hiss_off
+        hiss_off = False
+
+    def hiss_turn_off():
+        "turned hiss recognition off"
+        global hiss_off
+        hiss_off = True
+
+
 
 def show_cursor_helper(show):
     """Show/hide the cursor"""
@@ -294,6 +306,9 @@ class UserActions:
                 ctrl.mouse_click(button=0, hold=16000)
 
     def noise_trigger_hiss(active: bool):
+        if hiss_off:
+            return
+        
         if setting_mouse_enable_hiss_scroll.get():
             if active:
                 if hiss_scroll_up:

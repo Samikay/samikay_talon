@@ -1,7 +1,7 @@
 app: intothebreach
 -
 
-
+tag(): user.game_window
 
 settings():
     user.mouse_move_amount = 20
@@ -10,6 +10,9 @@ settings():
 # Override these command to null it out. 
 snap full: user.copy_mouse_position_relative_window()
 ignore close: user.copy_mouse_position_relative_window()
+
+<user.arrow_key> [<user.n9>]: user.game_itb_mouse_dir(arrow_key, n9 or 1)
+
 
 acid: key(a)
 ten: mimic("down")
@@ -29,14 +32,16 @@ center:
     user.mouse_move_relative(0, -15)
     
 mouse info: user.mouse_move_relative_window(79,671)
+mouse status: user.mouse_move_relative_window(98,565)
 
-deploy confirm: user.game_itb_confirm_deployment()
-mission complete: 
+deploy: user.game_itb_confirm_deployment()
+continue: 
     user.mouse_move_relative_window(1001,657)
 
 whoops: user.mouse_move_relative_window(707,414)
 confirm: user.mouse_move_relative_window(566,414)
 
+understood: user.mouse_move_relative_window(682,523)
 
 mech install: user.mouse_move_relative_window(467,491)
 mech undo: user.mouse_move_relative_window(467,550)
@@ -46,12 +51,14 @@ mech storage: user.mouse_move_relative_window(951,302)
 mech weapon one: user.mouse_move_relative_window(609,495)
 mech weapon two: user.mouse_move_relative_window(609,546)
 
+rep spend: user.mouse_move_relative_window(638,652)
 rep weapon: user.mouse_move_relative_window(377,227)
 rep supply: user.mouse_move_relative_window(816,227)
+rep donate: user.mouse_move_relative_window(401,438)
 rep right: user.mouse_move_relative(95,0)
 rep left: user.mouse_move_relative(-95,0)
 
-<user.arrow_key> [<user.n20>]: user.game_itb_mouse_dir(arrow_key, n20 or 1)
+
 
 
 # Skip cutscenes

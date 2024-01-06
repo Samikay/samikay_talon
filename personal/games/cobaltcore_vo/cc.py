@@ -21,21 +21,11 @@ char_pos = {}
 class UserActions:
     def game_cc_mouse_dir(dir: str, v: int):
         "Moves cursor"
-        # center: 584,406 / up: 528,364 / l: 530:447 / d: 640,446 / r:643,364
+        
         x1, x2 = (714, 954); y1, y2 = (50, 90)
         x_tile_gap = (x2 - x1); y_tile_gap = (y2 - y1)
-        #distance = ((x1 - x2)**2 + (y1 - y2)**2)**0.5
-        #print(f"distance {distance} tile_gap {584 - 535}")
-        #tile_gap = distance
-        y = 0
-        x = 0
-        if (dir == "up"): y = -1;
-        if (dir == "down"): y = 1;
-        if (dir == "left"): x = -1;
-        if (dir == "right"): x = 1;
-
-        x = x*v
-        y = y*v
+    
+        x,y = x,y = actions.user.util_dir_to_xy(dir, v)
 
         actions.user.mouse_move_relative(x*x_tile_gap, y*y_tile_gap)
 

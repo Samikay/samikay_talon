@@ -6,3 +6,5 @@ app: ats
 -
 
 ^game mode$:                user.game_mode_enable()
+
+

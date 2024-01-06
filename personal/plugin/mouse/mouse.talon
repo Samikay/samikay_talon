@@ -1,18 +1,6 @@
-mouse right [<user.n20>]: 
-  modifier = n20 or 1
-  user.mouse_move_times(1 * modifier, 0)
-
-mouse left [<user.n20>]: 
-  modifier = n20 or 1
-  user.mouse_move_times(-1 * modifier, 0)
-
-mouse up [<user.n20>]: 
-  modifier = n20 or 1
-  user.mouse_move_times(0, -1 * modifier)
-
-mouse down [<user.n20>]: 
-  modifier = n20 or 1
-  user.mouse_move_times(0, 1 * modifier)
+mouse <user.arrow_key> [<user.n9>]: 
+  modifier = n9 or 1
+  user.mouse_move_dir(arrow_key, 1 * modifier)
 
   # Eye tracking
 track on:                   user.mouse_control_toggle(true)

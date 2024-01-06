@@ -1,6 +1,8 @@
 app: cobaltcore
 -
 
+tag(): user.game_window
+
 settings():
     speech.timeout = 0.125
     user.mouse_move_amount = 50
@@ -11,10 +13,7 @@ settings():
 snap full: user.copy_mouse_position_relative_window()
 ignore close: user.copy_mouse_position_relative_window()
 
-grid: mimic("grid win")
-grid <user.number_key>+: 
-    mimic("grid win")
-    user.grid_narrow_list(number_key_list)
+
 
 acid: user.game_hold_key("a")
 drum: user.game_hold_key("d")
@@ -41,7 +40,7 @@ show map: user.game_move_click(90,77)
 deck close: user.game_move_click(1690,1001)
 deck cancel: user.game_move_click(957,997)
 
-<user.arrow_key> [<user.n20>]: user.game_cc_mouse_dir(arrow_key, n20 or 1)
+<user.arrow_key> [<user.n9>]: user.game_cc_mouse_dir(arrow_key, n9 or 1)
 
 
 # Skip cutscenes

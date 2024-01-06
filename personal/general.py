@@ -19,6 +19,9 @@ class Actions:
     else:
       actions.user.discord_set_mute_status(True)
       actions.speech.enable()
+    
+
+  
 
 @ctx.action_class("user")
 class OverrideActions:
