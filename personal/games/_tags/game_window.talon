@@ -1,6 +1,7 @@
 tag: user.game_window
 -
 
+# Change grid commands to stay within our window
 grid: mimic("grid win")
 
 grid <user.number_key>+: 
@@ -9,6 +10,7 @@ grid <user.number_key>+:
 
 copy mouse: user.copy_mouse_position_relative_window() 
 
+# These are commands we null out to not mess with our window.
 snap full: skip()
 ignore close: skip()
 snap right: skip()

@@ -4,30 +4,28 @@ from talon import Module, Context, actions, ctrl
 
 mod = Module()
 
-mod.apps.cobaltcore = """
+mod.apps.slaytheprincess = """
 os: windows
-and app.exe: CobaltCore.exe
+and app.exe: SlaythePrincess.exe
 """
 
 
 ctx = Context()
 ctx.matches = """
-app: cobaltcore
+app: slaytheprincess
 """
 
 char_pos = {}
 
 @mod.action_class
 class UserActions:
-    def game_cc_mouse_dir(dir: str, v: int):
-        "Moves cursor"
-        x1, x2 = (714, 954); y1, y2 = (50, 90)
-        x_tile_gap = (x2 - x1); y_tile_gap = (y2 - y1)
-
-        #x_tile_gap = (900 - 714) #Uncomment if you take +2 card draw every turn
-    
-        x,y = actions.user.util_dir_to_xy(dir, v)
-        actions.user.mouse_move_relative(x*x_tile_gap, y*y_tile_gap)
+    def game_stp_option_dir(dir: str, v: int):
+        "Selects option"
+        #x,y = actions.user.util_dir_to_xy(dir, v)
+        for i in range(v):
+            print (i)
+            actions.user.game_hold_key(dir)
+        #actions.user.mouse_move_relative(x*x_tile_gap, y*y_tile_gap)
 
 
 

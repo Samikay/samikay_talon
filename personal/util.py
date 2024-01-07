@@ -21,3 +21,16 @@ class Actions:
     x = x*v
     y = y*v
     return (x, y)
+
+  def util_dir_to_diag_xy(dir: str, v: int = 1):
+    """Takes a dir and returns a diagonal x,y"""
+    x, y = 0, 0
+    if (dir == "up"): x = -1; y = -1;
+    if (dir == "down"): x = 1; y = 1;
+    if (dir == "left"): x = -1; y = 1;
+    if (dir == "right"): x = 1; y = -1;
+    x = x*v
+    y = y*v
+    return (x, y)
+
+

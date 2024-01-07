@@ -31,19 +31,7 @@ class UserActions:
         # center: 584,406 / up: 528,364 / l: 530:447 / d: 640,446 / r:643,364
         x1, x2 = (641, 696); y1, y2 = (361, 406)
         x_tile_gap = (x2 - x1); y_tile_gap = (y2 - y1)
-        #distance = ((x1 - x2)**2 + (y1 - y2)**2)**0.5
-        #print(f"distance {distance} tile_gap {584 - 535}")
-        #tile_gap = distance
-        y = 0
-        x = 0
-        if (dir == "up"): x = -1; y = -1;
-        if (dir == "down"): x = 1; y = 1;
-        if (dir == "left"): x = -1; y = 1;
-        if (dir == "right"): x = 1; y = -1;
-
-        x = x*v
-        y = y*v
-
+        x,y = actions.user.util_dir_to_diag_xy(dir, v)
         actions.user.mouse_move_relative(x*x_tile_gap, y*y_tile_gap)
         
     def game_itb_confirm_deployment():
@@ -51,6 +39,8 @@ class UserActions:
         x_cur, y_cur = actions.user.mouse_position_relative_window()
         actions.user.mouse_move_relative_window(113, 169)
         time.sleep(0.35)
+        actions.mouse_click(0)
+        time.sleep(0.1)
         actions.mouse_click(0)
         time.sleep(0.35)
         actions.user.mouse_move_relative_window(x_cur, y_cur)
@@ -72,23 +62,10 @@ class UserActions:
             actions.user.mouse_move_relative_window(x_cur, y_cur)
             actions.key(key)
 
-        
-
-
-    
-        
-
-
-
 
 @ctx.action_class("user")
 class OverrideActions:
-    def noise_trigger_pop():
-        """Primary attack hold"""
-        actions.mouse_click(0)
-        actions.mouse_drag(0)
-
     def noise_trigger_hiss(active: bool):
-        """Primary attack hold"""
+        """Null out"""
         pass
         

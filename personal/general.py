@@ -12,7 +12,7 @@ ctx = Context()
 @mod.action_class
 class Actions:
   def toggle_speech():
-    """enables discord and disables talon and vice versa"""
+    """enables discord (via api) and disables talon and vice versa - hook up to a foot switch press for maximum ease of use"""
     if actions.speech.enabled():
       actions.user.discord_set_mute_status(False)
       actions.speech.disable()

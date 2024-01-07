@@ -7,10 +7,6 @@ settings():
     user.mouse_move_amount = 20
 
 # --- Actions
-# Override these command to null it out. 
-snap full: user.copy_mouse_position_relative_window()
-ignore close: user.copy_mouse_position_relative_window()
-
 <user.arrow_key> [<user.n9>]: user.game_itb_mouse_dir(arrow_key, n9 or 1)
 
 
@@ -42,6 +38,10 @@ whoops: user.mouse_move_relative_window(707,414)
 confirm: user.mouse_move_relative_window(566,414)
 
 understood: user.mouse_move_relative_window(682,523)
+
+pod open: user.mouse_move_relative_window(960,488)
+pod one: user.mouse_move_relative_window(725,428)
+pod two: user.mouse_move_relative_window(735,548)
 
 mech install: user.mouse_move_relative_window(467,491)
 mech undo: user.mouse_move_relative_window(467,550)
