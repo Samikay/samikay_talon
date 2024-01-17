@@ -9,6 +9,8 @@ self = actions.self
 mod = Module()
 ctx = Context()
 
+pop_click = True
+
 @mod.action_class
 class Actions:
   def toggle_speech():
@@ -22,6 +24,13 @@ class Actions:
       actions.speech.enable()
       #actions.user.microphone_select(2) # Reselects system default microphone
       actions.user.discord_set_mute_status(True)
+
+  def toggle_pop_click():
+    "Toggles pop_click"
+    global pop_click
+    pop_click = not pop_click
+
+
     
 
   
@@ -30,5 +39,6 @@ class Actions:
 class OverrideActions:
     def noise_trigger_pop():
         """Click"""
-        actions.mouse_click(0)
+        if (pop_click):
+          actions.mouse_click(0)
   

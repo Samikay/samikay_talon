@@ -4,7 +4,7 @@ settings():
 
 key(ctrl-shift-o): user.toggle_speech()
 key(ctrl-shift-l): tracking.control_toggle()
-#key(ctrl-shift-k): tracking.control_toggle()
+key(ctrl-shift-k): user.toggle_pop_click()
 
 tab return:
   key(ctrl-shift-a)
