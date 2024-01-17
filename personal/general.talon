@@ -3,6 +3,14 @@ settings():
 
 
 key(ctrl-shift-o): user.toggle_speech()
+key(ctrl-shift-l): tracking.control_toggle()
+#key(ctrl-shift-k): tracking.control_toggle()
+
+tab return:
+  key(ctrl-shift-a)
+  sleep(150ms)
+  key(enter)
+
 
 hold down <user.modifiers>+: key("{modifiers}:down")
 release <user.modifiers>+: key("{modifiers}:up")

@@ -7,4 +7,8 @@ os: linux
 and app.name: /teams/
 os: linux
 and app.name: /Teams/
+os: windows
+and app.name: /Teams/
+os: windows
+and app.name: /teams/
 """
