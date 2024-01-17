@@ -33,4 +33,10 @@ class Actions:
     y = y*v
     return (x, y)
 
+  def util_print_active_window(): 
+    "Prints window title"
+    window = ui.active_window()
+    print(window.title)
+
+
 

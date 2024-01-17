@@ -44,9 +44,8 @@ class FrozenActions:
 
     def mouse_freeze_toggle():
         enable_tracker()
-
+<<<<<<< HEAD
 """
-
 
 @mod.action_class
 class Actions:

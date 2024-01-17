@@ -31,14 +31,13 @@ class Actions:
     pop_click = not pop_click
 
 
-    
-
-  
-
 @ctx.action_class("user")
 class OverrideActions:
     def noise_trigger_pop():
         """Click"""
         if (pop_click):
-          actions.mouse_click(0)
+          if (actions.tracking.control_zoom_enabled()):
+            actions.skip()
+          else:
+            actions.mouse_click(0)
   
