@@ -13,12 +13,15 @@ ctx = Context()
 class Actions:
   def toggle_speech():
     """enables discord (via api) and disables talon and vice versa - hook up to a foot switch press for maximum ease of use"""
+    # Follow the steps in apps/discord/discord_api , you can use localhost (https://127.0.0.1) as the redirect URI.
     if actions.speech.enabled():
-      actions.user.discord_set_mute_status(False)
       actions.speech.disable()
+      #actions.user.microphone_select(1) # Optional, selects 'none' microphone (so you can't make noises/'talon wake' commands)
+      actions.user.discord_set_mute_status(False)
     else:
-      actions.user.discord_set_mute_status(True)
       actions.speech.enable()
+      #actions.user.microphone_select(2) # Reselects system default microphone
+      actions.user.discord_set_mute_status(True)
     
 
   

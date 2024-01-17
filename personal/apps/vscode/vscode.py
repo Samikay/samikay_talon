@@ -1,7 +1,6 @@
 from talon import Context, Module, actions, app
 
 ctx = Context()
-mod = Module()
 
 ctx.matches = r"""
 os: windows

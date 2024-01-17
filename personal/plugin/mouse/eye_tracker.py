@@ -28,7 +28,9 @@ ctx_frozen.matches = r"""
 tag: user.eye_tracker_frozen
 """
 
+# Commenting out for now.
 """
+
 @ctx_eye_tracker.action_class("user")
 class EyeTrackerActions:
     def mouse_on_pop():
@@ -42,6 +44,7 @@ class FrozenActions:
 
     def mouse_freeze_toggle():
         enable_tracker()
+<<<<<<< HEAD
 """
 
 @mod.action_class
