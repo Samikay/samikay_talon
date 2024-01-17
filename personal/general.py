@@ -27,5 +27,8 @@ class Actions:
 class OverrideActions:
     def noise_trigger_pop():
         """Click"""
-        actions.mouse_click(0)
+        if (actions.tracking.control_zoom_enabled()):
+          actions.skip()
+        else:
+          actions.mouse_click(0)
   

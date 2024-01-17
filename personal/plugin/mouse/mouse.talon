@@ -10,3 +10,6 @@ track gaze:                 tracking.control_gaze_toggle(true)
 track head:                 tracking.control_gaze_toggle(false)
 track debug:                tracking.control_debug_toggle()
 track calibrate:            tracking.calibrate()
+track zoom:                 tracking.control_zoom_toggle()
+
+track zoom cancel:          tracking.zoom_cancel()

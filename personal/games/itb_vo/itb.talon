@@ -58,7 +58,7 @@ rep donate: user.mouse_move_relative_window(401,438)
 rep right: user.mouse_move_relative(95,0)
 rep left: user.mouse_move_relative(-95,0)
 
-
+mouse weapon: user.mouse_move_relative_window(278,664)
 
 
 # Skip cutscenes

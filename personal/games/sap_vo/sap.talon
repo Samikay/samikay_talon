@@ -1,15 +1,14 @@
 app: sap
 -
 
-
-
 settings():
     user.mouse_move_amount = 115
 
+tag(): user.game_window
+
 # --- Actions
 # Override these command to null it out. 
-snap full: user.copy_mouse_position_relative_window()
-ignore close: user.copy_mouse_position_relative_window()
+grave three: mimic("grab three")
 
 (grab one):   user.game_sap_moveto_click(275, 600)
 (grab two):   user.game_sap_moveto_click(385, 600)
