@@ -10,6 +10,8 @@ grid <user.number_key>+:
 
 copy mouse: user.copy_mouse_position_relative_window() 
 
+game window resize: user.game_resize_window()
+
 # These are commands we null out to not mess with our window.
 snap full: skip()
 ignore close: skip()

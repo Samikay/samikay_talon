@@ -31,11 +31,11 @@ class UserActions:
 @ctx.action_class("user")
 class OverrideActions:
     def noise_trigger_pop():
-        """Primary attack hold"""
+        """Click and drag"""
         actions.mouse_click(0)
         actions.mouse_drag(0)
 
     def noise_trigger_hiss(active: bool):
-        """Primary attack hold"""
+        """Null"""
         pass
         

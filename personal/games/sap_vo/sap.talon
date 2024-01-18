@@ -3,13 +3,18 @@ app: sap
 
 settings():
     user.mouse_move_amount = 115
+    user.game_window_size_x = 1468
+    user.game_window_size_y = 904
+    # SAP: 1468, 904
 
 tag(): user.game_window
 
 # --- Actions
-# Override these command to null it out. 
+
+# Common mishearing....
 grave three: mimic("grab three")
 
+# Shop spaces
 (grab one):   user.game_sap_moveto_click(275, 600)
 (grab two):   user.game_sap_moveto_click(385, 600)
 (grab three): user.game_sap_moveto_click(495, 600)
@@ -19,13 +24,14 @@ grave three: mimic("grab three")
 food [one]: user.game_sap_moveto_click(1175, 600)
 food two: user.game_sap_moveto_click(1065, 600)
 
-one:   user.game_sap_moveto_click(275, 350)
-two:   user.game_sap_moveto_click(385, 350)
-three: user.game_sap_moveto_click(495, 350)
+# Team spaces, preface "slot" to guarantee no mishearing (mostly unneeded).
+[slot] one:   user.game_sap_moveto_click(275, 350)
+[slot] two:   user.game_sap_moveto_click(385, 350)
+[slot] three: user.game_sap_moveto_click(495, 350)
 [slot] four:  user.game_sap_moveto_click(605, 350)
-five:  user.game_sap_moveto_click(715, 350)
+[slot] five:   user.game_sap_moveto_click(715, 350)
 
-
+# 'Roll' was not picked up as often, so 'next' works great.
 (next|refresh): user.game_sap_moveto_click(150, 800)
 
 battle: user.game_sap_moveto_click(1400, 800)

@@ -32,11 +32,30 @@ class Actions:
     x = x*v
     y = y*v
     return (x, y)
+  
+  def util_dir_to_wasd(dir: str, qe: bool = False):
+    """Takes an arrow key, returns wasd. If qe = true, left/right -> q/e"""
+    if (qe == False):
+      if (dir == "up"): return "w"
+      if (dir == "left"): return "a"
+      if (dir == "down"): return "s"
+      if (dir == "right"): return "d"
+    
+    if (qe):
+      if (dir == "left"): return "q"
+      if (dir == "right"): return "e"
+
+    return "w"
+
+
 
   def util_print_active_window(): 
     "Prints window title"
+    #If you're interested in other attributes (e.g. whether it's fullscreen) open REPL and print(dir(ui.active_window())
     window = ui.active_window()
-    print(window.title)
+    print(f"Title: {window.title}, rect: {window.rect}, size: {window.rect.size}, id: {window.id}")
+
+
 
 
 

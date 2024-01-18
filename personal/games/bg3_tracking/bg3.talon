@@ -11,7 +11,7 @@ settings():
 
 pan <user.arrow_key> [<user.n9>]: 
     mod = n9 or 1
-    user.game_hold_key(arrow_key, 0.25 * mod)
+    user.game_hold_key(arrow_key, 0.5 * mod)
 
 look left [<user.n9>]: 
     mod = n9 or 1
@@ -25,26 +25,26 @@ turn around: user.game_hold_key("e", 0.35*5)
 turn right: mimic("look right four")
 turn left: mimic("look left four")
 
-
+# Shorter than the community "hold down <modifier>"
 hold alt: 
-    key(alt:up)
+    # Some weirdness keeps holding it sometimes, just release it here.
+    key(alt:up) 
+    sleep(10ms)
     key(alt:down)
 
-
-
+# Navigating inventory/spell selection/action selection    
 spell <user.arrow_key> [<user.n9>]: 
     mod = n9 or 1
-    user.mouse_move_dir(arrow_key, 3 * mod)
+    user.mouse_move_dir(arrow_key, 3 * mod, 20)
 
 
+skip: mimic("space")
+
+#Common misspeaks
 brace: mimic("space")
 bat: skip()
 ten end: mimic("turn around")
 ten red: mimic("turn around")
 
-# Skip cutscenes
-skip:
-    mouse_click(0)
-    sleep(1s)
-    mouse_click(0)
-    sleep(50ms)
+
+    

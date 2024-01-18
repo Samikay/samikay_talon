@@ -7,6 +7,14 @@ from talon_plugins import eye_zoom_mouse
 self = actions.self
 
 mod = Module()
+
+setting_mouse_move_amount = mod.setting(
+    "mouse_move_amount",
+    type=int,
+    default=40,
+    desc="The amount to move the mouse",
+)
+
 ctx = Context()
 
 @mod.action_class
@@ -22,7 +30,7 @@ class Actions:
       actions.speech.enable()
       #actions.user.microphone_select(2) # Reselects system default microphone
       actions.user.discord_set_mute_status(True)
-    
+
 
   
 
@@ -30,7 +38,7 @@ class Actions:
 class OverrideActions:
     def noise_trigger_pop():
         """Click"""
-        if (actions.tracking.control_zoom_enabled()):
+        if (actions.tracking.control_zoom_enabled()): #otherwise we click where the cursor starts before the zoom.
           actions.skip()
         else:
           actions.mouse_click(0)

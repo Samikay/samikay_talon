@@ -13,9 +13,22 @@ setting_keymouse_delay = mod.setting(
     "game_keymouse_delay",
     type=float,
     default=0.1,
-    desc="The amount to move the mouse in the current window",
+    desc="The length of time in seconds to hold a key/mouse button down for in game_hold_[key|mouse]",
 )
 
+setting_game_window_size_x = mod.setting(
+    "game_window_size_x",
+    type=int,
+    default=0,
+    desc="When user.game_resize_window is called, this value is used",
+)
+
+setting_game_window_size_y = mod.setting(
+    "game_window_size_y",
+    type=int,
+    default=0,
+    desc="When user.game_resize_window is called, this value is used",
+)
 
 ctx = Context()
 ctx.matches = r"""
@@ -37,6 +50,7 @@ class SpeechActions:
 
 @mod.action_class
 class Actions:
+    # Game Mode
     def game_mode_enable():
         """Enable game mode"""
         actions.mode.disable("command")
@@ -59,7 +73,7 @@ class Actions:
         )
 
     
-
+    # Game Actions
     def game_move_click(x: int, y: int):
         """Moves mouse and clicks"""
         actions.user.mouse_move_relative_window(x, y)
@@ -87,6 +101,14 @@ class Actions:
         ctrl.mouse_click(button=button, down=True)
         time.sleep(dur)
         ctrl.mouse_click(button=button, up=True)
+
+    # Game Utility
+    def game_resize_window(): 
+        "Resizes the active window using the settings, does nothing if settings not specified"
+        x, y = (setting_game_window_size_x.get(), setting_game_window_size_y.get())
+        if (x == 0 or y == 0): return
+        window = ui.active_window()
+        window.resize(x, y)
 
     
 

@@ -13,5 +13,6 @@ go oldest unread:           key(shift-pageup)
 go audio channel:           key(alt-left)
 go text channel:            key(alt-right)
 
-stream one: user.mouse_move_relative_window(944,470)
-stream two: user.mouse_move_relative_window(1381,1052)
+# Not used now...
+#stream one: user.mouse_move_relative_window(944,470)
+#stream two: user.mouse_move_relative_window(1381,1052)

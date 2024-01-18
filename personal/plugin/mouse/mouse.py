@@ -16,6 +16,7 @@ setting_mouse_move_amount = mod.setting(
     desc="The amount to move the mouse",
 )
 
+# An additional setting if needed.
 setting_mouse_game_move_amount = mod.setting(
     "mouse_game_move_amount",
     type=int,
