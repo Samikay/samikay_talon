@@ -17,6 +17,8 @@ setting_mouse_move_amount = mod.setting(
 
 ctx = Context()
 
+pop_click = True
+
 @mod.action_class
 class Actions:
   def toggle_speech():
@@ -31,15 +33,19 @@ class Actions:
       #actions.user.microphone_select(2) # Reselects system default microphone
       actions.user.discord_set_mute_status(True)
 
+  def toggle_pop_click():
+    "Toggles pop_click"
+    global pop_click
+    pop_click = not pop_click
 
-  
 
 @ctx.action_class("user")
 class OverrideActions:
     def noise_trigger_pop():
         """Click"""
-        if (actions.tracking.control_zoom_enabled()): #otherwise we click where the cursor starts before the zoom.
-          actions.skip()
-        else:
-          actions.mouse_click(0)
+        if (pop_click):
+          if (actions.tracking.control_zoom_enabled()):
+            actions.skip()
+          else:
+            actions.mouse_click(0)
   

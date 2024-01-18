@@ -4,7 +4,7 @@ settings():
 
 key(ctrl-shift-o): user.toggle_speech()
 key(ctrl-shift-l): user.mouse_control_toggle()
-#key(ctrl-shift-k): skip()
+key(ctrl-shift-k): user.toggle_pop_click()
 
 #Chrome
 tab return: 
