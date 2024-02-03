@@ -5,11 +5,16 @@
 - In the .py file, change `mod.apps.[game abbreviation]` to your [game abbreviation], and `app.exe: [game exe]` to your game's exe. Whatever you put for `mods.apps.[name]` copy into the ctx.matches `app` part.
 - In the .talon file, change the very first line `app: [game abbreviation]` to the same you put in ctx.matches.
 - Make sure to save your changes to both files `Ctrl+S`
-- Test out a command (something in the .talon file) in game to see if it worked! If it didn't, see 
+- Test out a command (something in the .talon file) in game to see if it worked! If it didn't, see **Commands not registering** below.
 
 # Defining Commands
-- Extra actions are defined in the module
+- games.py has some handy functions that should cover most usage.
+- Check other game folders (such as ITB) for more examples to steal!
+- Games tagged with "game_window" get some extra commands for free, see *_tags/game_window.talon*
 
+# Handy commands defined elsewhere
+- `print title` puts identifying information in `Scripting` -> `View Log`, such as the windows title, position and size.
+- `tool tip`/`stay` turns off eyetracking for 2.5s and then re-enables it so you can read tool tips/hovers.
 
 
 # Commands Not Registering

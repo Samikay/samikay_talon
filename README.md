@@ -6,19 +6,21 @@ A (primarily) gamer's Talon Voice repo.
 2. Click on the Talon icon on your task bar, `Speech Recognition` -> `Install Conformer D`
 ![Talon Tray](https://i.imgur.com/NgwUvGS.jpeg)
 3. Click on the Talon icon on your task bar, `Scripting` -> `Open Talon Home`
-4. Download this repo as a ZIP  by clicking on the green `Code` button, then `Download ZIP`. If you are more technical, you can do this the 'expected' way.
+4. Download this repo as a ZIP by clicking on the green `Code` button, then `Download ZIP`. If you are more technical, you can do this the 'expected' way.
 5. Unzip the contents into the `user` folder.
 ![Talon Folder Setup](https://i.imgur.com/CvAtHnm.jpeg)
 
 ## Games
-Has support for:
-Super Auto Pets (Voice Only)
-Into The Breach (Voice Only)
-Cobalt Core (Voice Only)
-Slay The Princess (Voice Only)
-WoW Classic (90% Voice Only)
-Against The Storm (Eye tracking)
-Baldur's Gate 3 (Eye tracking)
+Has support for, see [personal/games/README](https://github.com/Samikay/samikay_talon/tree/main/personal/games) for adding more:
+- Super Auto Pets (Voice Only)
+- Into The Breach (Voice Only)
+- Cobalt Core (Voice Only)
+- Slay The Princess (Voice Only)
+- WoW Classic (90% Voice Only)
+- Against The Storm (Eye tracking)
+- Baldur's Gate 3 (Eye tracking)
+
+
 
 
 ## Helpful
