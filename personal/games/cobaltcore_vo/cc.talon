@@ -9,10 +9,7 @@ settings():
     
 
 # --- Actions
-# Override these command to null it out. 
-snap full: user.copy_mouse_position_relative_window()
-ignore close: user.copy_mouse_position_relative_window()
-
+<user.arrow_key> [<user.n9>]: user.game_cc_mouse_dir(arrow_key, n9 or 1)
 
 acid: user.game_hold_key("a")
 drum: user.game_hold_key("d")
@@ -50,12 +47,5 @@ mid row: user.mouse_move_relative_window(932,415)
 mid right: mimic("mouse right")
 mid left: mimic("mouse left")
 
-<user.arrow_key> [<user.n9>]: user.game_cc_mouse_dir(arrow_key, n9 or 1)
 
 
-# Skip cutscenes
-skip:
-    mouse_click(0)
-    sleep(1s)
-    mouse_click(0)
-    sleep(50ms)

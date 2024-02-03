@@ -20,13 +20,17 @@ from talon import Context, Module, actions, ui
 
 # 2. Create a JSON file at this path:
 OAUTH2_CREDENTIALS_PATH = os.path.expanduser("~/.discord/discord-oauth2-creds.json")
+#e.g. C:/Users/<your name>/.discord/
 
 # ...with client_id, client_secret, redirect_uri keys, like so:
+###  redirect_uri can just call your own computer, e.g. "https://127.0.0.1"
 # {
 # 	"client_id": "YOUR_CLIENT_ID",
 # 	"client_secret": "YOUR_CLIENT_SECRET",
-# 	"redirect_uri": "https://YOUR_REDIRECT_URL"
+# 	"redirect_uri": "https://127.0.0.1"
 # }
+#
+
 
 # 3. That's it! Try calling `actions.user.discord_toggle_mute()` from the REPL.
 

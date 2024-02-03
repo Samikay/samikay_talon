@@ -1,9 +1,9 @@
 mode: user.game
-#app: wow
+app: wow
 -
 
 settings():
-    speech.timeout = 0.075
+    speech.timeout = 0.085
 
 stop: 
     key(w)
@@ -13,10 +13,20 @@ stop:
     key(d)
     key(a)
 
-run: key(w:down)
-left: key(q:down)
-right: key(e:down)
-back: key(s:down)
+run:
+    key(s:up)
+    key(e:up)
+    key(q:up)
+    key(w:down)
+left: 
+    key(e:up)
+    key(q:down)
+right: 
+    key(q:up)
+    key(e:down)
+back: 
+    key(w:up)
+    key(s:down)
 
 step <user.arrow_key>: user.game_wow_step(arrow_key)
     
@@ -28,15 +38,21 @@ turn left: user.game_wow_key_holdfor("a", 0.5)
 turn right: user.game_wow_key_holdfor("d", 0.5)
 turn around: user.game_wow_180()
 
-pan left: key(a:down)
-pan right: key(d:down)
-
 center: user.mouse_move_center_active_window()
 use: mouse_click(1)
 select: mouse_click(0)
 
-shock: user.mouse_scroll_up()
-bolt: user.mouse_scroll_down()
+#Warlock
+bolt: user.mouse_scroll_up()
+hand: user.mouse_scroll_down()
+demon: key(5)
+tyrant: key(shift-r)
+strength: key(shift-t)
+trinket: key(shift-4)
+power: key(shift-s)
+snipe: key(shift-d)
+blast: key(shift-3)
+defend: key(shift-g)
 
 
 mouse four: mouse_click(4)
@@ -74,26 +90,7 @@ press <user.keys>: key(keys)
 
 <user.number_string>: "{number_string}"
 
-# Skip cutscenes
-skip:
-    key(escape:down)
-    sleep(1s)
-    key(escape:up)
-    sleep(50ms)
-    key(escape)
-
-mouse right [<user.n20>]: 
-    modifier = n20 or 1
-    user.mouse_move_times(1 * modifier, 0)
-  
-mouse left [<user.n20>]: 
-    modifier = n20 or 1
-    user.mouse_move_times(-1 * modifier, 0)
-  
-mouse up [<user.n20>]: 
-    modifier = n20 or 1
-    user.mouse_move_times(0, -1 * modifier)
-  
-mouse down [<user.n20>]: 
-    modifier = n20 or 1
-    user.mouse_move_times(0, 1 * modifier)
+##  Copied directly from personal/plugin/mouse.talon
+mouse <user.arrow_key> [<user.n9>]: 
+    modifier = n9 or 1
+    user.mouse_move_dir(arrow_key, 1 * modifier)

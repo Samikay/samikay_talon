@@ -1,9 +1,10 @@
-from talon import Module
+import time
+
+from talon import Module, Context
 
 mod = Module()
 # mod.tag(str, desc="") - this declares a tag in the user namespace (i.e. 'user.tabs')
 mod.tag("game_window", desc="Commands for easier navigation of a game window")
-
 
 # You can alter the set of tags whenever you like within your Python
 # code. The tags will only be applied if your Context is currently active

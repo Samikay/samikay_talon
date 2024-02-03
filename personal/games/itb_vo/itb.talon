@@ -4,23 +4,26 @@ app: intothebreach
 tag(): user.game_window
 
 settings():
+    user.game_window_size_x = 1282
+    user.game_window_size_y = 752
     user.mouse_move_amount = 20
 
 # --- Actions
 <user.arrow_key> [<user.n9>]: user.game_itb_mouse_dir(arrow_key, n9 or 1)
 
 
+# air -> acid rebind as 'air' isn't picked up as often.
+# letters: (a)cid, (d)rum, (s)un, (f)ine
 acid: key(a)
-ten: mimic("down")
-
-move undo: key(shift)
-turn reset: key(backspace)
-turn end: key(space)
-
 save acid: user.game_itb_move_and_save("a")
 save <user.letter>: user.game_itb_move_and_save(letter)
 go acid: user.game_itb_goto_char("a")
 go <user.letter>: user.game_itb_goto_char(letter)
+
+
+move undo: key(shift)
+turn reset: key(backspace)
+turn end: key(space)
 
 center: 
     user.mouse_move_center_active_window()
@@ -60,10 +63,5 @@ rep left: user.mouse_move_relative(-95,0)
 
 mouse weapon: user.mouse_move_relative_window(278,664)
 
-
-# Skip cutscenes
-skip:
-    mouse_click(0)
-    sleep(1s)
-    mouse_click(0)
-    sleep(50ms)
+#mishearing
+ten: mimic("down")

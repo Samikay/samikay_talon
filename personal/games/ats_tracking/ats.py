@@ -31,5 +31,8 @@ class OverrideActions:
 
     def noise_trigger_hiss(active: bool):
         """Null out"""
+        if (active):
+            pass
+            #actions.user.game_hold_mouse(0, 0.05)
         pass
         

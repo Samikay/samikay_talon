@@ -23,11 +23,3 @@ return: user.game_move_click(142,1035)
 bottom: 
     user.game_stp_option_dir("down", 20)
     mimic("wheel down")
-
-
-# Skip cutscenes
-skip:
-    mouse_click(0)
-    sleep(1s)
-    mouse_click(0)
-    sleep(50ms)

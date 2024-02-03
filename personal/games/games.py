@@ -1,6 +1,6 @@
 import time
 
-from talon import Module, Context, actions, ctrl
+from talon import Module, Context, actions, ctrl, ui
 
 mod = Module()
 
@@ -40,14 +40,6 @@ ctx.settings = {
 }
 
 
-@ctx.action_class("speech")
-class SpeechActions:
-    def disable():
-        actions.mode.save()
-        actions.mode.disable("user.game")
-        actions.mode.enable("sleep")
-
-
 @mod.action_class
 class Actions:
     # Game Mode
@@ -74,13 +66,11 @@ class Actions:
 
     
     # Game Actions
-    def game_move_click(x: int, y: int):
+    def game_move_click(x: int, y: int, button: int = 0):
         """Moves mouse and clicks"""
         actions.user.mouse_move_relative_window(x, y)
         time.sleep(0.25) #give time for ui to respond
-        ctrl.mouse_click(button=0, down=True)
-        time.sleep(0.1)
-        ctrl.mouse_click(button=0, up=True)
+        self.game_hold_mouse(button)
     
     def game_move_click_return(x: int, y: int):
         """Moves mouse, clicks, returns"""
@@ -107,6 +97,7 @@ class Actions:
         "Resizes the active window using the settings, does nothing if settings not specified"
         x, y = (setting_game_window_size_x.get(), setting_game_window_size_y.get())
         if (x == 0 or y == 0): return
+        print(f"Resizing to: {x},{y}")
         window = ui.active_window()
         window.resize(x, y)
 

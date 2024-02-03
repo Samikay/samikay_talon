@@ -26,7 +26,7 @@ class Actions:
     # Follow the steps in apps/discord/discord_api , you can use localhost (https://127.0.0.1) as the redirect URI.
     if actions.speech.enabled():
       actions.speech.disable()
-      #actions.user.microphone_select(1) # Optional, selects 'none' microphone (so you can't make noises/'talon wake' commands)
+      #actions.user.microphone_select(1) # Optional, selects 'none' microphone (so you can't make noises/'talon wake' commands) if you REALLY want to mute.
       actions.user.discord_set_mute_status(False)
     else:
       actions.speech.enable()
@@ -48,4 +48,9 @@ class OverrideActions:
             actions.skip()
           else:
             actions.mouse_click(0)
+
+    #def noise_trigger_hiss(active: bool):
+    #  pass
+      
+      
   

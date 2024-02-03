@@ -1,7 +1,8 @@
 mode: user.game
-tag: user.game_voip_muted
 -
 
-^command mode$:             user.game_mode_disable()
+settings():
+  user.mode_indicator_show = false
 
-^game mode$:                skip()
+
+^command mode$:             user.game_mode_disable()

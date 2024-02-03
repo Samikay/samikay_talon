@@ -15,8 +15,6 @@ ctx.matches = """
 app: cobaltcore
 """
 
-char_pos = {}
-
 @mod.action_class
 class UserActions:
     def game_cc_mouse_dir(dir: str, v: int):
@@ -34,12 +32,12 @@ class UserActions:
 @ctx.action_class("user")
 class OverrideActions:
     def noise_trigger_pop():
-        """Primary attack hold"""
+        """Close grid if open"""
         actions.user.game_hold_mouse(0)
         actions.user.grid_close()
         
 
     def noise_trigger_hiss(active: bool):
-        """Primary attack hold"""
+        """Null out"""
         pass
         

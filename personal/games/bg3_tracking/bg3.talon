@@ -25,7 +25,6 @@ turn around: user.game_hold_key("e", 0.35*5)
 turn right: mimic("look right four")
 turn left: mimic("look left four")
 
-# Shorter than the community "hold down <modifier>"
 hold alt: 
     # Some weirdness keeps holding it sometimes, just release it here.
     key(alt:up) 

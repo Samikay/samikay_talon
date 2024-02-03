@@ -19,13 +19,6 @@ char_pos = {}
 
 @mod.action_class
 class UserActions:
-    def game_itb_moveto_click(x:int, y:int):
-        "Moves cursor and clicks"
-        actions.user.mouse_move_relative_window(x, y)
-        time.sleep(0.35)
-        actions.mouse_click(0)
-        actions.mouse_click(0)
-
     def game_itb_mouse_dir(dir: str, v: int):
         "Moves cursor"
         # center: 584,406 / up: 528,364 / l: 530:447 / d: 640,446 / r:643,364
@@ -62,10 +55,10 @@ class UserActions:
             actions.user.mouse_move_relative_window(x_cur, y_cur)
             actions.key(key)
 
-
 @ctx.action_class("user")
 class OverrideActions:
-    def noise_trigger_hiss(active: bool):
-        """Null out"""
-        pass
+    def noise_trigger_pop():
+        """Close grid if open"""
+        actions.user.game_hold_mouse(0)
+        actions.user.grid_close()
         
