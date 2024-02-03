@@ -10,8 +10,15 @@ A (primarily) gamer's Talon Voice repo.
 5. Unzip the contents into the `user` folder.
 ![Talon Folder Setup](https://i.imgur.com/CvAtHnm.jpeg)
 
-## Using it
-This is where things get messy...
+## Games
+Has support for:
+Super Auto Pets (Voice Only)
+Into The Breach (Voice Only)
+Cobalt Core (Voice Only)
+Slay The Princess (Voice Only)
+WoW Classic (90% Voice Only)
+Against The Storm (Eye tracking)
+Baldur's Gate 3 (Eye tracking)
 
 
 ## Helpful
