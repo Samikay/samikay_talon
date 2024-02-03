@@ -1,15 +1,14 @@
-# What
+A (primarily) gamer's Talon Voice repo.
 
-A Talon Voice repo that is meant to be more easily used by gamers.
+## How To Use
 
-## Complete Installation
-
-1. Install Talon ( https://talonvoice.com/ ).
-2. Run Talon
-3. Click on the Talon icon on your task bar, `Speech Recognition` -> `Install Conformer D`
-4. Click on the Talon icon on your task bar, `Scripting` -> `Open Talon Home`
-5. Download this repo as a ZIP  by clicking on the green `Code` button, then `Download ZIP`. If you are more technical, you can do this the 'expected' way.
-6. Unzip the contents into the `user` folder.
+1. Install & Run Talon ( https://talonvoice.com/ ).
+2. Click on the Talon icon on your task bar, `Speech Recognition` -> `Install Conformer D`
+![Talon Tray](https://i.imgur.com/NgwUvGS.jpeg)
+3. Click on the Talon icon on your task bar, `Scripting` -> `Open Talon Home`
+4. Download this repo as a ZIP  by clicking on the green `Code` button, then `Download ZIP`. If you are more technical, you can do this the 'expected' way.
+5. Unzip the contents into the `user` folder.
+![Talon Folder Setup](https://i.imgur.com/CvAtHnm.jpeg)
 
 ## Using it
 This is where things get messy...
