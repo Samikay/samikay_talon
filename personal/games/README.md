@@ -14,6 +14,7 @@
 
 # Handy commands defined elsewhere
 - `print title` puts identifying information in `Scripting` -> `View Log`, such as the windows title, position and size.
+- `copy relative` prints to log and adds to clipboard (so you can follow up with `paste that`) the current mouse position in the active window.
 - `tool tip`/`stay` turns off eyetracking for 2.5s and then re-enables it so you can read tool tips/hovers.
 
 
