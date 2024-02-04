@@ -1,4 +1,4 @@
-A (primarily) gamer's Talon Voice repo.
+A gamer's Talon Voice repo.
 
 ## How To Use
 
@@ -9,9 +9,10 @@ A (primarily) gamer's Talon Voice repo.
 4. Download this repo as a ZIP by clicking on the green `Code` button, then `Download ZIP`. If you are more technical, you can do this the 'expected' way.
 5. Unzip the contents into the `user` folder.
 ![Talon Folder Setup](https://i.imgur.com/CvAtHnm.jpeg)
+6. Learn Talon :P The [community repo](https://github.com/talonhub/community?tab=readme-ov-file#getting-started-with-talon) can help with that.
 
 ## Games
-Has support for, see [personal/games/README](https://github.com/Samikay/samikay_talon/tree/main/personal/games) for adding more:
+Has support for the following, see [personal/games/README](https://github.com/Samikay/samikay_talon/tree/main/personal/games) for adding more:
 - Super Auto Pets (Voice Only)
 - Into The Breach (Voice Only)
 - Cobalt Core (Voice Only)
@@ -21,8 +22,6 @@ Has support for, see [personal/games/README](https://github.com/Samikay/samikay_
 - Baldur's Gate 3 (Eye tracking)
 
 
-
-
 ## Helpful
 [Talon Wiki: User File Sets](https://talon.wiki/talon_user_file_sets/)
 
@@ -30,7 +29,7 @@ Has support for, see [personal/games/README](https://github.com/Samikay/samikay_
 
 - [Talon Community](https://github.com/talonhub/community) 
 - [David Tejada - Rango](https://github.com/david-tejada/rango-talon)
-- [Andreas Arvidsson](https://github.com/AndreasArvidsson/andreas-talon)
+- [Andreas Arvidsson](https://github.com/AndreasArvidsson/andreas-talon) (who plays Diablo 3 with Talon, very cool!)
 
 
 # Subtree setup

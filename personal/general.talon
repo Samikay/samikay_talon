@@ -28,5 +28,5 @@ go right large: mimic("go right ten times")
 # Copies to clipboard, also prints to log.
 copy relative: user.copy_mouse_position_relative_window()
 
-# Prints identifying information on active window, useful for context matching, or with game_resize_window
+# Prints identifying information on active window, useful for context matching, or with games/games.py: game_resize_window
 print title: user.util_print_active_window()
