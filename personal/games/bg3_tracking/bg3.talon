@@ -3,6 +3,7 @@ app: baldursgate3
 
 tag(): user.game_window
 
+# Assumes 2560x1440p for mouse movement.
 settings():
     user.mouse_move_amount = 20
 

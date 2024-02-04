@@ -6,19 +6,20 @@ key(ctrl-shift-o): user.toggle_speech()
 key(ctrl-shift-l): user.mouse_control_toggle()
 key(ctrl-shift-k): user.toggle_pop_click()
 
+# Helpful 
 (tool tip|stay): 
   user.mouse_control_toggle()
   sleep(2500ms)
   user.mouse_control_toggle()
+
+hold [down] <user.modifiers>+: key("{modifiers}:down")
+release <user.modifiers>+: key("{modifiers}:up")
 
 #Chrome
 tab return: 
   key(ctrl-shift-a)
   sleep(150ms)
   key(enter)
-
-hold [down] <user.modifiers>+: key("{modifiers}:down")
-release <user.modifiers>+: key("{modifiers}:up")
 
 # Youtube...
 go right small: mimic("go right two times")

@@ -2,6 +2,7 @@ mode: user.game
 app: wow
 -
 
+# Must be in game mode, say 'game mode' to run. 'command mode' to return back to normal Talon.
 settings():
     speech.timeout = 0.085
 
