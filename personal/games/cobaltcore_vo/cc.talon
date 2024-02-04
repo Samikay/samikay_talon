@@ -3,9 +3,14 @@ app: cobaltcore
 
 tag(): user.game_window
 
+# Don't think you can change the window size, after setting fullscreen off the window was 1584,1054 (check by saying 'print title' and check the Scripting -> View Log)
+#   these were the values I had if you need to reverse engineer some positions?
 settings():
     speech.timeout = 0.125
     user.mouse_move_amount = 50
+    user.game_window_size_x = 1584
+    user.game_window_size_y = 1054
+
     
 
 # --- Actions

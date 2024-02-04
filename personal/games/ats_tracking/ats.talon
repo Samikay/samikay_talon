@@ -3,6 +3,7 @@ app: ats
 
 tag(): user.game_window
 
+# Assumes 2560x1440p for mouse positions.
 settings():
     user.mouse_move_amount = 60
     speech.timeout = 0.2

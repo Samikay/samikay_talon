@@ -3,6 +3,7 @@ app: intothebreach
 
 tag(): user.game_window
 
+# Set game to windowed mode and say 'game window resize' to have mouse positions sync up here.
 settings():
     user.game_window_size_x = 1282
     user.game_window_size_y = 752
