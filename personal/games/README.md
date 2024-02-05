@@ -1,8 +1,7 @@
 # New Game Setup
 - Copy an existing game folder to get started. Rename the .py and .talon files appropriately.
-- Open the game, click Talon icon in your tray, `Scripting` -> `Console (REPL)`
-- Type `ui.apps()`, press `Ctrl-F` and type in parts of the game name until you get a match. Note the name of the .exe
-- In the .py file, change `mod.apps.[name]` to your [game name], and `app.exe: [game exe]` to your game's exe. Whatever you put for `mods.apps.[name]` copy into the ctx.matches `app` part.
+- Open the game, say `talon dump context` and click on the Talon icon in your tray -> **Scripting** -> **View Log**, note the name and/or title.
+- In the .py file, change `mod.apps.[name]` to your [game name], and `app.exe: [game exe]` to your game's exe from the earlier command. Whatever you put for `mods.apps.[name]` copy into the ctx.matches `app` part.
 - In the .talon file, change the very first line `app: [name]` to the same you put in ctx.matches.
 - Make sure to save your changes to both files `Ctrl+S`
 - Test out a command (something in the .talon file) in game to see if it worked! If it didn't, see **Commands not registering** below.
