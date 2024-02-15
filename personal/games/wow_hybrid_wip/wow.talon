@@ -35,9 +35,9 @@ look left:  user.game_wow_step("a")
 look right: user.game_wow_step("d")
     
 
-turn left: user.game_hold_key("a", 0.5)
-turn right: user.game_hold_key("d", 0.5)
-turn around: user.game_hold_key("a", 1)
+turn left: user.game_press_key("a", 0.5)
+turn right: user.game_press_key("d", 0.5)
+turn around: user.game_press_key("a", 1)
 
 center: user.mouse_move_center_active_window()
 use: mouse_click(1)

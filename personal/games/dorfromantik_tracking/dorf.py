@@ -4,14 +4,14 @@ from talon import Module, Context, actions, ctrl
 
 mod = Module()
 
-mod.apps.ats = """
+mod.apps.dorf = """
 os: windows
-and app.exe: Against the Storm.exe
+and app.exe: Dorfromantik.exe
 """
 
 ctx = Context()
 ctx.matches = """
-app: ats
+app: dorf
 """
 
 char_pos = {}

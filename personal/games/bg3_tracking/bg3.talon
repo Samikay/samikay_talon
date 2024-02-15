@@ -12,17 +12,17 @@ settings():
 
 pan <user.arrow_key> [<user.n9>]: 
     mod = n9 or 1
-    user.game_hold_key(arrow_key, 0.5 * mod)
+    user.game_press_key(arrow_key, 0.5 * mod)
 
 look left [<user.n9>]: 
     mod = n9 or 1
-    user.game_hold_key("q", 0.35 * mod)
+    user.game_press_key("q", 0.35 * mod)
 
 look right [<user.n9>]: 
     mod = n9 or 1
-    user.game_hold_key("e", 0.35 * mod)
+    user.game_press_key("e", 0.35 * mod)
 
-turn around: user.game_hold_key("e", 0.35*5)
+turn around: user.game_press_key("e", 0.35*5)
 turn right: mimic("look right four")
 turn left: mimic("look left four")
 

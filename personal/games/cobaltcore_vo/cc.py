@@ -33,7 +33,7 @@ class UserActions:
 class OverrideActions:
     def noise_trigger_pop():
         """Close grid if open"""
-        actions.user.game_hold_mouse(0)
+        actions.user.game_press_mouse(0)
         actions.user.grid_close()
         
 

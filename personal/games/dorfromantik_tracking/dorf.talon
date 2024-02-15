@@ -1,4 +1,4 @@
-app: ats
+app: dorf
 -
 
 tag(): user.game_window
@@ -7,6 +7,7 @@ tag(): user.game_window
 settings():
     user.mouse_move_amount = 60
     speech.timeout = 0.2
+    key_hold = 32
 
 # -  -- Actions
 <user.arrow_key> [<user.n9>]: 
@@ -31,25 +32,6 @@ working: mimic('hold down alt')
 release: 
     mimic('release alt')
     mimic('release shift')
-
-food: user.game_move_click(1049,1368)
-useful: user.game_move_click(1203,1357)
-house: user.game_move_click(1134,1357)
-camps: user.game_move_click(1008,1357)
-roads: user.game_move_click(938,1358)
-services: user.game_move_click(1271,1351)
-
-rotate:
-    mimic("red")
-    sleep(50ms)
-    mimic("red")
-    sleep(50ms)
-    mimic("red")
-
-zoom out:
-    mimic("wheel downer")
-    sleep(750ms)
-    mimic("wheel stop")
 
 center:
     mimic("harp")

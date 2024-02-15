@@ -28,7 +28,7 @@ class MainActions:
         print(key)
         if key == "left": key = "q"
         if key == "right": key = "e"
-        actions.user.game_hold_key(key, 0.2)
+        actions.user.game_press_key(key, 0.2)
 
     def game_wow_spiral(key: str):
         """Attempts to navigate a spiral staircase"""

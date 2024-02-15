@@ -16,15 +16,15 @@ settings():
 # --- Actions
 <user.arrow_key> [<user.n9>]: user.game_cc_mouse_dir(arrow_key, n9 or 1)
 
-acid: user.game_hold_key("a")
-drum: user.game_hold_key("d")
+acid: user.game_press_key("a")
+drum: user.game_press_key("d")
 space: 
-    user.game_hold_key("space")
+    user.game_press_key("space")
     mimic("cards")
 
 ten: mimic("down")
 
-righty: user.game_hold_mouse(1)
+righty: user.game_press_mouse(1)
 
 center: 
     user.mouse_move_center_active_window()
