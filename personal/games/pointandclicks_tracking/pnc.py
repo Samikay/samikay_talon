@@ -15,6 +15,11 @@ os: windows
 and title: /Chants of Sennaar/i
 """
 
+mod.apps.generic_pnc = """
+os: windows
+and title: /Behind the frame/i
+"""
+
 
 ctx = Context()
 ctx.matches = """
@@ -33,11 +38,13 @@ class OverrideActions:
     def noise_trigger_hiss(active: bool):
         """Null out"""
         if (active):
-          #actions.user.game_mouse_drag(0)
+          actions.user.game_mouse_drag(0)
           #actions.user.game_mouse_doubleclick(0)
-          #actions.user.game_ double_click()
-          inputHolder.hold_click(2)
+          #  actions.user.game_ double_click()
+          #inputHolder.hold_click(2)
           pass
+        else: 
+          actions.user.mouse_drag_end()
         pass
       
   

@@ -14,8 +14,8 @@ self = actions.self
 setting_keymouse_delay = mod.setting(
     "game_keymouse_delay",
     type=float,
-    default=0.1,
-    desc="The length of time in seconds to hold a key/mouse button down for in game_hold_[key|mouse]",
+    default=0.05,
+    desc="The length of time in seconds to hold a key/mouse button down for in game_press_[key|mouse]",
 )
 
 setting_game_window_size_x = mod.setting(

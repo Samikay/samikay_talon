@@ -7,8 +7,8 @@ tag(): user.game_window
 settings():
     user.mouse_move_amount = 60
     speech.timeout = 0.2
-    user.game_window_size_x = 1922
-    user.game_window_size_y = 1112
+    user.game_window_size_x = 1920
+    user.game_window_size_y = 1080
     key_hold = 32
 
 # -  -- Actions

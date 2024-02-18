@@ -41,19 +41,11 @@ move_job = None
 @ctx.action_class("user")
 class OverrideActions:
     def noise_trigger_pop():
-
-        isMoving = actions.user.game_isaac_toggle_move()
-        if (isMoving): 
-            move_continuous()
-        else:
-            stop_move()
-            actions.user.game_keys_down_and_up("", "wasd")
-            time.sleep(0.025)
-            actions.user.game_keys_down_and_up("", "wasd")
-
+        print("hello")
+        actions.mouse_click(0)
+        pop_shoot()
         return
-        #arrow = regionHandler.which_dir_exclusive()
-        #actions.user.game_arrow_key_exclusive(arrow)
+
         
 
     def noise_trigger_hiss(active: bool):
@@ -67,6 +59,21 @@ class OverrideActions:
 
 
         pass
+
+def pop_move():
+    isMoving = actions.user.game_isaac_toggle_move()
+    if (isMoving): 
+        move_continuous()
+    else:
+        stop_move()
+        actions.user.game_keys_down_and_up("", "wasd")
+        time.sleep(0.025)
+        actions.user.game_keys_down_and_up("", "wasd")
+
+def pop_shoot():
+    arrow = regionHandler.which_dir_exclusive()
+    actions.user.game_arrow_key_exclusive(arrow)
+
 
 def move_continuous():
     global move_job 
