@@ -52,7 +52,10 @@ class OverrideActions:
     #def noise_trigger_hiss(active: bool):
     #  pass
 
+    #----
     # These need parrot (talon beta).
+    #----
+    # For reading tooltips more easily.
     def noise_trigger_cluck():
       print("-- g_trigger: cluck")
       actions.tracking.control_gaze_toggle()

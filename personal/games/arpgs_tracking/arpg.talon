@@ -16,14 +16,16 @@ settings():
 #^automatic press$:  user.game_handy_auto_presser("enter", 0.250)
 #key(space): user.game_handy_auto_presser("enter", 0.250)
 
-key(ctrl-shift-o:down): 
+key(f16:down): 
+    user.game_key_hold_down("shift", "")
     mouse_drag(0)
-key(ctrl-shift-o:up): 
+key(f16:up): 
+    user.game_key_hold_down("", "shift")
     user.mouse_drag_end()
 
-key(ctrl-shift-k:down): 
+key(f14:down): 
     mouse_drag(0)
-key(ctrl-shift-k:up): 
+key(f14:up): 
     user.mouse_drag_end()
 
 one: user.game_arpg_toggle_key('1')

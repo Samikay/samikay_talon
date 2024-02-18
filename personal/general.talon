@@ -1,7 +1,14 @@
 settings():
   user.mouse_move_amount = 30
 
+# right foot pedal
+key(f16): user.toggle_speech()
+# center
+key(f15): user.mouse_control_toggle()
+# left
+key(f14): user.toggle_pop_click()
 
+# Keyboard shortcut replicants if the foot pedals are in use for something else.
 key(ctrl-shift-o): user.toggle_speech()
 key(ctrl-shift-l): user.mouse_control_toggle()
 key(ctrl-shift-k): user.toggle_pop_click()

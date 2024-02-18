@@ -1,8 +1,5 @@
-# Ones I like:
-# tut (tongue to roof, disapproving sound)
-# buzz (bzzz)
-
-
+# Needs Talon Beta.
+# Only decent additional sounds (I think): tut, shush, cluck. Maybe buzz (zzz).
 
 parrot(cluck): 
 	user.noise_trigger_cluck()

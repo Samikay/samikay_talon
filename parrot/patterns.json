@@ -13,8 +13,8 @@
 	"tut": {
 		"sounds": ["tut"],
 		"threshold": {
-			">power": 15,
-			">probability": 0.90
+			">power": 16,
+			">probability": 0.91
 		},
 		"throttle": {
 			"tut": 0.15,
@@ -46,7 +46,7 @@
 			">probability": 0.4
 		},
 		"throttle": {
-			"cluck": 0.1
+			"hiss": 0.1
 		}
 	},
 
@@ -76,7 +76,7 @@
 			">probability": 0.35
 		},
 		"throttle": {
-			"cluck": 0.1
+			"shush": 0.1
 		}
 	}
 }
