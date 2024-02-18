@@ -58,7 +58,14 @@ class OverrideActions:
     # For reading tooltips more easily.
     def noise_trigger_cluck():
       print("-- g_trigger: cluck")
+      global pop_click
+      pop_click = False
+      cron.after("50ms", lambda: actions.user.toggle_pop_click())
       actions.tracking.control_gaze_toggle()
+    
+    def noise_trigger_tut():
+      print("-- g_trigger: tut")
+      actions.mouse_click(1)
         
 
     

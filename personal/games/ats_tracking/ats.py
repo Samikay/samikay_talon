@@ -9,10 +9,17 @@ os: windows
 and app.exe: Against the Storm.exe
 """
 
+mod.apps.ats = """
+os: windows
+and title: /Slipways/i
+"""
+
 ctx = Context()
 ctx.matches = """
 app: ats
 """
+
+
 
 char_pos = {}
 
@@ -29,10 +36,4 @@ class OverrideActions:
     def noise_trigger_pop():
         actions.user.game_press_mouse(0, 0.05)
 
-    def noise_trigger_hiss(active: bool):
-        """Null out"""
-        if (active):
-            pass
-            #actions.user.game_press_mouse(0, 0.05)
-        pass
         

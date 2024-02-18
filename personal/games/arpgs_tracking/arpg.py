@@ -22,12 +22,13 @@ ctx.matches = """
 app: generic_arpg
 """
 
-inputHolder = InputHolder()
+inputHolder = InputHolder(True)
 
 @mod.action_class
 class MainActions:
     def game_arpg_toggle_key(key: str) -> bool:
         """Holds the key"""
+        inputHolder.release_key()
         return inputHolder.hold_key(key)
         
 

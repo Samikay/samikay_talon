@@ -1,10 +1,18 @@
-mode: user.game
+#mode: user.game
 app: wow
 -
 
 # Must be in game mode, say 'game mode' to run. 'command mode' to return back to normal Talon.
 settings():
     speech.timeout = 0.085
+
+# Foot pedals
+key(f16:down): user.game_key_hold_down("w", "")
+key(f16:up): user.game_key_hold_down("", "w")
+key(f15:down): user.game_key_hold_down("e", "")
+key(f15:up): user.game_key_hold_down("", "e")
+key(f14:down): user.game_key_hold_down("q", "")
+key(f14:up): user.game_key_hold_down("", "q")
 
 stop: 
     key(w)

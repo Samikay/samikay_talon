@@ -34,14 +34,11 @@ three: user.game_arpg_toggle_key('3')
 four: user.game_arpg_toggle_key('4')
 five: user.game_arpg_toggle_key('5')
 
-whale: user.game_press_key("2")
 egg: user.game_press_key("3")
-red: user.game_press_key("4")
+
+heal: user.game_press_key('n')
+follow: user.game_press_key('a')
 
 loot: user.game_arpg_toggle_key('alt')
 
 equip: user.game_press_mouse(1, 0.05)
-
-#misspeaks
-trap: mimic('drag')
-yank: mimic('drag')

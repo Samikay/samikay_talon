@@ -32,7 +32,7 @@ food two: user.game_move_click(1065, 600)
 [slot] five:   user.game_move_click(715, 350)
 
 # 'Roll' was not picked up as often, so 'next' works great.
-(reroll|refresh): user.game_move_click(150, 800)
+(next|refresh): user.game_move_click(150, 800)
 
 battle: user.game_move_click(1400, 800)
 
