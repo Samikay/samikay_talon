@@ -7,18 +7,20 @@
 		},
 		"throttle": {
 			"cluck": 0.15,
-			"tut": 0.2
+			"tut": 0.2,
+			"pop": 0.1
 		}
 	},
 	"tut": {
 		"sounds": ["tut"],
 		"threshold": {
+			">f0": 2000,
 			">power": 16,
-			">probability": 0.91
+			">probability": 0.80
 		},
 		"throttle": {
-			"tut": 0.15,
-			"pop": 0.15
+			"tut": 0.1,
+			"pop": 0.05
 		}
 	},
 
@@ -29,7 +31,6 @@
 			">probability": 0.90
 		},
 		"throttle": {
-			"tut": 0.10,
 			"cluck": 0.10
 		}
 	},
@@ -56,8 +57,8 @@
 	"pop": {
 		"sounds": ["pop"],
 		"threshold": {
-			">power": 10,
-			">probability": 0.87
+			">power": 7,
+			">probability": 0.82
 		},
 		"throttle": {
 			"tut": 0.10

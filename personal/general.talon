@@ -15,9 +15,9 @@ key(ctrl-shift-k): user.toggle_pop_click()
 
 # Helpful 
 (tool tip|stay): 
-  user.mouse_control_toggle()
+  tracking.control_gaze_toggle()
   sleep(2500ms)
-  user.mouse_control_toggle()
+  tracking.control_gaze_toggle()
 
 hold [down] <user.modifiers>+: key("{modifiers}:down")
 release <user.modifiers>+: key("{modifiers}:up")

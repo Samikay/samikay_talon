@@ -17,10 +17,9 @@ class InputHolder:
             self.last_held_key = ""
             self.holding_key = False
             if (self.debug): print(f"Release Key: {self.last_held_key}")
-
-
-        
+    
     def hold_key(self, key: str) -> bool:
+        if (len(key) <= 0): return self.holding_key
         self.holding_key = not self.holding_key
         if (key != self.last_held_key): 
             actions.user.game_key_hold_down("", self.last_held_key)

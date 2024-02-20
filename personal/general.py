@@ -17,7 +17,7 @@ setting_mouse_move_amount = mod.setting(
 
 ctx = Context()
 
-pop_click = True
+my_pop_click = True
 
 @mod.action_class
 class Actions:
@@ -35,20 +35,30 @@ class Actions:
 
   def toggle_pop_click():
     "Toggles pop_click"
-    global pop_click
-    pop_click = not pop_click
+    global my_pop_click
+    my_pop_click = not my_pop_click
 
 
 @ctx.action_class("user")
 class OverrideActions:
     def noise_trigger_pop():
         """Click"""
-        if (pop_click):
+        global my_pop_click
+        if (my_pop_click):
           if (actions.tracking.control_zoom_enabled()):
             actions.skip()
           else:
+            print("-- general_trigger pop")
             actions.mouse_click(0)
 
+    def noise_trigger_talon_pop():
+      """The default Talon pop works much better while other noises are happening"""
+      global my_pop_click
+      if (not my_pop_click):
+        print("-- general_ <<talon>> pop")
+        actions.mouse_click(0)
+
+    # Used by the community/mouse for scrolling. Don't override here.
     #def noise_trigger_hiss(active: bool):
     #  pass
 
@@ -57,15 +67,21 @@ class OverrideActions:
     #----
     # For reading tooltips more easily.
     def noise_trigger_cluck():
-      print("-- g_trigger: cluck")
-      global pop_click
-      pop_click = False
-      cron.after("50ms", lambda: actions.user.toggle_pop_click())
+      print("-- general_trigger: cluck")
       actions.tracking.control_gaze_toggle()
     
     def noise_trigger_tut():
-      print("-- g_trigger: tut")
-      actions.mouse_click(1)
+      print("-- general_trigger: tut")
+      if (actions.speech.enabled()):
+        actions.mouse_click(1)
+
+    
+    #def noise_trigger_shush(active: bool):
+    #  pass
+
+
+      #actions.tracking.control_gaze_toggle()
+      
         
 
     

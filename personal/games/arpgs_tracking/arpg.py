@@ -30,11 +30,33 @@ class MainActions:
         """Holds the key"""
         inputHolder.release_key()
         return inputHolder.hold_key(key)
-        
 
+    def game_arpg_hold_last_key():
+        "Title"
+        global last_pressed_key
+        print("last pressed: " + last_pressed_key)
+        inputHolder.release_key()
+        inputHolder.hold_key(last_pressed_key)
+
+    def game_arpg_release_last_key():
+        "Title"
+        inputHolder.release_key()
+
+
+
+        
+last_pressed_key = ""
 
 @ctx.action_class("user")
 class OverrideActions:
+    def game_press_key(key: str, dur: float = 0):
+        global last_pressed_key
+        inputHolder.release_key()
+        last_pressed_key = key
+        actions.key(key)
+
+        
+
     def noise_trigger_pop():
         """Always run"""
         inputHolder.release_key()

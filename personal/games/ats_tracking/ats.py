@@ -9,11 +9,6 @@ os: windows
 and app.exe: Against the Storm.exe
 """
 
-mod.apps.ats = """
-os: windows
-and title: /Slipways/i
-"""
-
 ctx = Context()
 ctx.matches = """
 app: ats

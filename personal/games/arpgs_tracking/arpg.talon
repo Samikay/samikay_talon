@@ -17,16 +17,16 @@ settings():
 #key(space): user.game_handy_auto_presser("enter", 0.250)
 
 key(f16:down): 
-    user.game_key_hold_down("shift", "")
-    mouse_drag(0)
+    user.game_arpg_hold_last_key()
 key(f16:up): 
-    user.game_key_hold_down("", "shift")
-    user.mouse_drag_end()
+    user.game_arpg_release_last_key()
+    #user.game_key_hold_down("", "shift")
+    #user.mouse_drag_end()
 
 key(f14:down): 
-    mouse_drag(0)
+    key(4:down)
 key(f14:up): 
-    user.mouse_drag_end()
+    key(4:up)
 
 one: user.game_arpg_toggle_key('1')
 two: user.game_arpg_toggle_key('2')
@@ -34,7 +34,11 @@ three: user.game_arpg_toggle_key('3')
 four: user.game_arpg_toggle_key('4')
 five: user.game_arpg_toggle_key('5')
 
+quench: user.game_press_key("1") 
+whale: user.game_press_key("2") 
 egg: user.game_press_key("3")
+red: user.game_press_key("4") 
+trap: user.game_press_key("5") 
 
 heal: user.game_press_key('n')
 follow: user.game_press_key('a')

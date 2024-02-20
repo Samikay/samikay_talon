@@ -26,5 +26,5 @@ parrot(hiss:stop):
 	#print("--- hiss end")
 	#print("hiss end")
 
-
+parrot(pop): user.noise_trigger_pop()
 #parrot(whistle): print("whistle")

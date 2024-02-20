@@ -20,6 +20,16 @@ os: windows
 and title: /Slipways/i
 """
 
+mod.apps.generic_pnc = """
+os: windows
+and title: /LostInPlay/i
+"""
+
+mod.apps.generic_pnc = """
+os: windows
+and app.exe: LostInPlay.exe
+"""
+
 
 ctx = Context()
 ctx.matches = """
@@ -34,17 +44,20 @@ class OverrideActions:
         ctrl.mouse_click(0, down=True)
         time.sleep(0.05)
         ctrl.mouse_click(0, up=True)
+        inputHolder.reset(heldKey = False, heldClick = True)
 
     def noise_trigger_hiss(active: bool):
         if (active):
-          actions.user.game_mouse_drag(0)
+          #actions.user.game_mouse_drag(0)
           #actions.user.game_mouse_doubleclick(0)
           #  actions.user.game_ double_click()
           #inputHolder.hold_click(2)
+          inputHolder.hold_click(0)
           pass
         else: 
-          actions.user.mouse_drag_end()
-        pass
+          pass
+          
+        
 
     def noise_trigger_shush(active: bool):
         if (active):

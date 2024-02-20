@@ -10,7 +10,7 @@ hiss_cron = None
 
 @mod.action_class
 class Actions:
-    def noise_trigger_pop():
+    #def noise_trigger_pop():
         """
         Called when the user makes a 'pop' noise. Listen to
         https://noise.talonvoice.com/static/previews/pop.mp3 for an
@@ -35,5 +35,5 @@ def noise_trigger_hiss_debounce(active: bool):
         actions.user.noise_trigger_hiss(active)
 
 
-noise.register("pop", lambda _: actions.user.noise_trigger_pop())
+#noise.register("pop", lambda _: actions.user.noise_trigger_pop())
 #noise.register("hiss", noise_trigger_hiss_debounce)

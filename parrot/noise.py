@@ -17,6 +17,14 @@ mod = Module()
 
 @mod.action_class
 class Actions:
+    def noise_trigger_pop():
+        """
+        Called when the user makes a 'pop' noise. Listen to
+        https://noise.talonvoice.com/static/previews/pop.mp3 for an
+        example.
+        """
+
+
     def noise_trigger_tut():
       """Tut noise - sometimes trigger when moving my head"""
       #actions.mouse_click(0)
@@ -27,18 +35,6 @@ class Actions:
     def noise_trigger_cluck():
       """Cluck noise -- also sometimes triggers when moving my head"""
       print ("real cluck")
-      pass
-
-    def noise_parrot_trigger_shush(start: bool):
-      """Shush noise"""
-      noise_trigger_shush_debounce(start)
-      #print ("trigger: shush: ")
-      pass
-
-    def noise_parrot_trigger_hiss(start: bool):
-      """Shush noise"""
-      noise_trigger_hiss_debounce(start)
-      #print ("trigger: shush: ")
       pass
 
     
@@ -54,6 +50,25 @@ class Actions:
       actions.skip()
       pass
 
+
+    # --- Not real functions you're expected to override, handle more accurate recognition.
+    def noise_parrot_trigger_shush(start: bool):
+      """Shush noise"""
+      noise_trigger_shush_debounce(start)
+      #print ("trigger: shush: ")
+      pass
+
+    def noise_parrot_trigger_hiss(start: bool):
+      """Shush noise"""
+      noise_trigger_hiss_debounce(start)
+      #print ("trigger: shush: ")
+      pass
+
+    # Sometimes background noises mess with my own pop recognition.
+    def noise_trigger_talon_pop():
+      """The base talon pop"""
+
+    # Because hiss is used by the community/mouse to scroll, and I wanted to test my own hiss recording, this function exists.
     def noise_trigger_hiss_debug(active: bool):
       """Shush noise active"""
       print (f"* noise: hiss: {active}")
@@ -84,7 +99,8 @@ def noise_trigger_hiss_debounce(active: bool):
         #actions.user.noise_trigger_hiss(active)
 
 # For public repo. I comment this out.      
-noise.register("hiss", noise_trigger_hiss_debounce)
+#noise.register("hiss", noise_trigger_hiss_debounce)
+noise.register("pop", lambda _: actions.user.noise_trigger_talon_pop())
 
 #An experiment
 shush_end_cron = None

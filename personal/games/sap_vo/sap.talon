@@ -34,7 +34,12 @@ food two: user.game_move_click(1065, 600)
 # 'Roll' was not picked up as often, so 'next' works great.
 (next|refresh): user.game_move_click(150, 800)
 
-battle: user.game_move_click(1400, 800)
+battle: 
+    user.game_move_click(1400, 800)
+    user.mouse_control_toggle()
+    sleep(11000ms)
+    user.mouse_control_toggle()
+    
 
 (freeze|sell): user.game_move_click(800, 800)
 
