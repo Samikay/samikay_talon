@@ -15,16 +15,19 @@ settings():
 #^automatic press$:  user.game_handy_auto_presser("enter", 0.250)
 #key(space): user.game_handy_auto_presser("enter", 0.250)
 
-key(f16:down): 
-    user.game_keys_down_and_up("w", "")
-    print("down")
-key(f16:up): 
-    user.game_keys_down_and_up("", "w")
-    print("up")
-key(f15:down): user.game_press_key("e")
-key(f15:up): user.game_press_key("e")
-key(f14:down): user.game_key_hold_down("space", "")
-key(f14:up): user.game_key_hold_down("", "space")
+key(f15:down): user.game_key_hold_down("space", "")
+key(f15:up): user.game_key_hold_down("", "space")
+
+key(f16:down): user.game_keys_down_and_up("e", "")
+key(f16:up): user.game_keys_down_and_up("", "e")
+
+
+key(f17): user.game_press_key("e")
+key(f18:down): user.game_keys_down_and_up("w", "")
+key(f18:up): user.game_keys_down_and_up("", "w")
+    
+
+
 
 #noise(pop): user.game_press_key("e")
 

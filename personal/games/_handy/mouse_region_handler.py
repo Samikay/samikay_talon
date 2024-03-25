@@ -5,7 +5,10 @@ class MouseRegionHandler:
         self.rect = None
         self.regions = []
 
-    def setup(self, width: int, height: int):
+    def has_setup(self) -> bool:
+        return self.rect != None
+
+    def setup(self, width: int = 120, height: int = 120):
         windowRect = ui.active_window().rect
         print(f"windowRect: {windowRect}")
         center_x, center_y = windowRect.left + (windowRect.width / 2), windowRect.top + (windowRect.height / 2)

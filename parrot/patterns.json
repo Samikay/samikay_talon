@@ -38,10 +38,11 @@
 	"shush": {
 		"sounds": ["shush"],
 		"threshold": {
+			">f0": 30,
 			">power": 5,
 			">probability": 0.90
 		},
-		"graceperiod": 0.15,		
+		"graceperiod": 0.2,
 		"grace_threshold": {
 			">power": 3,
 			">probability": 0.4
@@ -51,14 +52,13 @@
 		}
 	},
 
-
-
-	
 	"pop": {
 		"sounds": ["pop"],
 		"threshold": {
-			">power": 7,
-			">probability": 0.82
+			">f0": 60,
+			">f1": 100,
+			">power": 4.5,
+			">probability": 0.7
 		},
 		"throttle": {
 			"tut": 0.10

@@ -25,7 +25,11 @@ class OverrideActions:
     def noise_trigger_pop():
         """Always run"""
         #actions.user.game_press_mouse(0)
-        inputHolder.hold_click(0)
+        if (inputHolder.is_holding_click()):
+          actions.user.game_press_mouse(0)
+          inputHolder.resetClick()
+        else:
+          inputHolder.hold_click(0)
         #inputHolder.reset(heldKey = False, heldClick = True)
         
 

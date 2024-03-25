@@ -38,6 +38,11 @@ class Actions:
     global my_pop_click
     my_pop_click = not my_pop_click
 
+  def noise_pop():
+    """Pop trigger for overriding incase switching between the two pops"""
+    actions.mouse_click(0)
+
+
 
 @ctx.action_class("user")
 class OverrideActions:
@@ -49,14 +54,16 @@ class OverrideActions:
             actions.skip()
           else:
             print("-- general_trigger pop")
-            actions.mouse_click(0)
+            actions.user.noise_pop()
+            
 
     def noise_trigger_talon_pop():
       """The default Talon pop works much better while other noises are happening"""
       global my_pop_click
       if (not my_pop_click):
         print("-- general_ <<talon>> pop")
-        actions.mouse_click(0)
+        actions.user.noise_pop()
+        
 
     # Used by the community/mouse for scrolling. Don't override here.
     #def noise_trigger_hiss(active: bool):

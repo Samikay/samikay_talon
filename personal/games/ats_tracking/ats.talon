@@ -21,6 +21,15 @@ look right [<user.n9>]:
     mod = n9 or 1
     user.game_press_key("e", 0.35 * mod)
 
+key(f15:down): mouse_click(1)
+
+
+key(f17:down): mimic("wheel upper")
+key(f17:up): mimic("wheel stop")
+
+key(f18:down): mouse_drag(1)
+key(f18:up): user.mouse_drag_end()
+
 turn around: mimic("look right four")
 turn right: mimic("look right two")
 turn left: mimic("look left two")

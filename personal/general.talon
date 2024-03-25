@@ -1,14 +1,16 @@
 settings():
   user.mouse_move_amount = 30
 
-# right foot pedal
-key(f16): user.toggle_speech()
-# center
-key(f15): user.mouse_control_toggle()
-# left
+# foot pedal actions
 key(f14): user.toggle_pop_click()
+key(f15): tracking.control_gaze_toggle()
+key(f16): user.mouse_drag(0)
 
-# Keyboard shortcut replicants if the foot pedals are in use for something else.
+key(f17): mouse_click(1)
+key(f18): mouse_click(2)
+key(f19): user.toggle_speech()
+
+# Keyboard shortcut replicants if the foot pedals are in use for something else (i.e. in game)
 key(ctrl-shift-o): user.toggle_speech()
 key(ctrl-shift-l): user.mouse_control_toggle()
 key(ctrl-shift-k): user.toggle_pop_click()
